@@ -1,3 +1,26 @@
 <template>
+  
+  <section repeat.for="gamepad of gamepads" class="clearfix">
+    
+    <h1>
+      Gamepad ${$index}:
+      <span style="font-weight:bold;color:${gamepad ? 'green' : 'red'};">
+        ${gamepad ? 'connected' : 'disconnected'}
+      </span>
+    </h1>
+
+    <div style="width:50%;float:left;">
+      <div repeat.for="button of gamepad.buttons">
+        Button ${$index}: ${button.pressed} / ${button.value}
+      </div>
+    </div>
+
+    <div style="width:50%;float:right;">
+      <div repeat.for="axis of gamepad.axes">
+        Axis ${$index}: ${axis.toFixed(2)}
+      </div>
+    </div>
+
+  </section>
 
 </template>
