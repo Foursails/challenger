@@ -2,15 +2,19 @@ export class Challenger {
 
   gamepads;
 
-  active;
+  active = false;
 
   constructor() {
     this.gamepads = [];
   }
 
   activate() {
-    this.active = true;
-    this.watchGamepads();
+    if (navigator.getGamepads) {
+      this.active = true;
+      this.watchGamepads(); 
+    } else {
+      this.active = null;
+    }
   }
 
   deactivate() {

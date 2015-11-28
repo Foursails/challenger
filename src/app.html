@@ -1,5 +1,5 @@
 <template>
-  
+
   <section repeat.for="gamepad of gamepads" class="clearfix">
     
     <h1>
@@ -20,6 +20,12 @@
         Axis ${$index}: ${axis.toFixed(2)}
       </div>
     </div>
+
+  </section>
+
+  <section if.bind="active === null">
+    
+    <h1>Gamepads not enabled in this browser.</h1>
 
   </section>
 

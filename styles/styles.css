@@ -8,6 +8,7 @@ html {
   background: #7FAD71 url('http://i.imgur.com/qlgoLVk.png') repeat-x center bottom;
   background-size: cover;
   overflow-y: auto;
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
 }
 
 body {
